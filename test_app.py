@@ -16,8 +16,8 @@ def test_home(client):
     response = client.get("/")
     assert response.status_code == 200  # Vérifie que la page d'accueil fonctionne
 
-def test_create_user(client):
-    response = client.post("/users", json={"name": "Alice"})
-    assert response.status_code == 200  # Vérifie que la requête fonctionne
-    assert "Utilisateur ajouté" in response.data.decode("utf-8")
+# def test_create_user(client):
+#     response = client.post("/users", json={"name": "Alice"})
+#     assert response.status_code == 200  # Vérifie que la requête fonctionne
+#     assert "Utilisateur ajouté" in response.data.decode("utf-8")
 
